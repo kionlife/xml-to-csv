@@ -40,8 +40,13 @@ class XmlToCsv {
         
     }
     
-    function generate_csv($data, $path) {
+    function generate_csv($data, $output) {
+        
+        $date = date("Y-m-d");
+        $path = $output . $_SERVER['SERVER_NAME'] . '_' . $date . '.csv';
+        
         $csv = fopen($path, 'w');
+        
         
         foreach ($data as $field) { 
             fputcsv($csv, $field, ';');
