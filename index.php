@@ -2,8 +2,8 @@
 
 include 'core/core.php';
 
-$input = 'res/data.xml';     //вхідний XML файл
-$output_path = 'res/';    //вихідний CSV файл
+$input = 'http://webtest.d0.acom.cloud/test/xml-examples/example-footwearnews.xml';     //XML input
+$output_path = 'res/';                                                                  //Output folder for CSV-file
 
 $parse = new XmlToCsv;
 $fields = $parse->parsing($input);
